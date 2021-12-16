@@ -1,3 +1,17 @@
+#*********************************************************************************
+#
+# Filename: measure CPU temp&freq.py
+# Projekt  : Raspberry Pi CPU temperature and frequency monitor
+# Hardware : Raspberry Pi 4, Raspberry Pi Zero 2 W
+#
+# Description:
+# The script reads out the temperature and frequency of the CPU and prints them to the terminal.
+#
+# Date:       Author:           Version
+# 16.12.2021  Thomas S. Perri   V1.0
+#
+#*********************************************************************************
+
 import os
 import time
 
