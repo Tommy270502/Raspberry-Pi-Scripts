@@ -14,9 +14,13 @@
 import os
 import time
 
-def temperature_of_raspberry_pi():
+def measure_temp():
     cpu_temp = os.popen("vcgencmd measure_temp").readline()
     return cpu_temp.replace("temp=", "")
+
+def measure_cpuVolt():
+    cpu_volt = os.popen("vcgencmd measure_volts core").readline()
+    return cpu_volt.replace("volt=", "")
 
 def measure_freq():
     cpu_freq = os.popen("vcgencmd measure_clock arm").readline()
@@ -28,8 +32,9 @@ def clear():
 
 while True:
     print("-------------")
-    print(temperature_of_raspberry_pi())
+    print(measure_temp())
     print(measure_freq())
+    print(measure_cpuVolt())
     print("-------------")
     time.sleep(1)
     print(clear())
